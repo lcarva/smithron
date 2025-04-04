@@ -1,0 +1,26 @@
+
+[TestWorkflows - 1]
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  creationTimestamp: null
+  name: hello-world
+spec:
+  arguments: {}
+  templates:
+  - container:
+      command:
+      - echo
+      - Hello, World!
+      env:
+      - name: GREETING
+        value: Hello
+      image: docker.io/busybox:latest
+      name: ""
+      resources: {}
+    inputs: {}
+    metadata: {}
+    name: run
+    outputs: {}
+
+---

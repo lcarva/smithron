@@ -81,3 +81,34 @@ spec:
     image: docker.io/busybox:latest
     name: run
 ```
+
+### Argo Workflows
+
+```bash
+./bin/smithron forge --plan examples/simple-plan.yaml --target argo-workflows
+```
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  creationTimestamp: null
+  name: hello-world
+spec:
+  arguments: {}
+  templates:
+  - container:
+      command:
+      - echo
+      - Hello, World!
+      env:
+      - name: GREETING
+        value: Hello
+      image: docker.io/busybox:latest
+      name: ""
+      resources: {}
+    inputs: {}
+    metadata: {}
+    name: run
+    outputs: {}
+```
