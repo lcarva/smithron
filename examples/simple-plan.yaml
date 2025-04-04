@@ -1,0 +1,8 @@
+---
+name: hello-world
+command:
+  - echo
+  - Hello, World!
+env:
+  GREETING: Hello
+image: docker.io/busybox:latest

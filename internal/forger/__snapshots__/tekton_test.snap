@@ -1,0 +1,20 @@
+
+[TestTekton - 1]
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  creationTimestamp: null
+  name: hello-world
+spec:
+  steps:
+  - command:
+    - echo
+    - Hello, World!
+    computeResources: {}
+    env:
+    - name: GREETING
+      value: Hello
+    image: docker.io/busybox:latest
+    name: run
+
+---

@@ -1,0 +1,12 @@
+
+[TestGitLab - 1]
+hello-world:
+  image:
+    entrypoint:
+    - echo
+    - Hello, World!
+    name: docker.io/busybox:latest
+  variables:
+    GREETING: Hello
+
+---

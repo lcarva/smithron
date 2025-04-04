@@ -1,0 +1,13 @@
+
+[TestGitHubAction - 1]
+name: hello-world
+runs:
+  using: docker
+  image: docker.io/busybox:latest
+  entrypoint: echo
+  args:
+  - Hello, World!
+  env:
+    GREETING: Hello
+
+---
