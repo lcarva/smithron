@@ -22,12 +22,12 @@ func (ArgoWorkflowsForger) Forge(ctx context.Context, plan Plan) ([]byte, error)
 	}
 
 	container := corev1.Container{
-		Image: plan.Image,
+		Image:   plan.Image,
 		Command: plan.Command,
-		Env:    env,
+		Env:     env,
 	}
 	template := v1alpha.Template{
-		Name: "run",
+		Name:      "run",
 		Container: &container,
 	}
 

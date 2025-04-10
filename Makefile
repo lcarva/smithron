@@ -18,6 +18,10 @@ $(OUT_DIR)/$(BINARY_NAME): $(GO_FILES)
 test:
 	go test ./...
 
+# Run formatter
+fmt:
+	go fmt ./...
+
 # Clean up build artifacts
 clean:
 	rm -rf $(OUT_DIR)
